@@ -2,38 +2,87 @@ import java.util.Stack;
 
 public class Ciudades 
 {
-	Stack <String> CarreteraA = new Stack <String> ();
-	Stack <String> CarreteraB = new Stack <String> ();
-	Stack <String> CarreteraC = new Stack <String> ();
+	Stack <String> Carretera = new Stack <String> ();
+	Stack <Number> Hora = new Stack <Number> ();
 	
-	public Stack CarreteraA(Stack <String> CarreteraA) 
+	public Stack CarreteraA(Stack <String> Carretera) 
 	{
-		CarreteraA.push("Santa Marta");
-		CarreteraA.push("La Paz");
-		CarreteraA.push("Montería");
-		CarreteraA.push("Sincelejo");
-		CarreteraA.push("Cartagena");
-		CarreteraA.push("Barranquilla");
-		return CarreteraA;
+		Carretera.push("Santa Marta");
+		Carretera.push("La Paz");
+		Carretera.push("MonterÃ­a");
+		Carretera.push("Sincelejo");
+		Carretera.push("Cartagena");
+		Carretera.push("Barranquilla");
+		return Carretera;
 	}
 	
-	public Stack CarreteraB(Stack <String> CarreteraB) 
+	public Stack HorasA(Stack <Number> Hora) 
 	{
-		CarreteraB.push("Cartagena");
-		CarreteraB.push("Riohacha");
-		CarreteraB.push("Valledupar");
-		CarreteraB.push("La Paz");
-		CarreteraB.push("San Benito");
-		return CarreteraB;
+		Hora.push(4);
+		Hora.push(6);
+		Hora.push(2.5);
+		Hora.push(3);
+		Hora.push(1.5);
+		Hora.push(1);
+		return Hora;
 	}
 	
-	public Stack CarreteraC(Stack <String> CarreteraC) 
+	public Stack CarreteraB(Stack <String> Carretera) 
 	{
-		CarreteraC.push("Valledupar");
-		CarreteraC.push("Plato");
-		CarreteraC.push("San Benito");
-		CarreteraC.push("Montería");
-		CarreteraC.push("Santa Marta");
-		return CarreteraC;
+		Carretera.push("Cartagena");
+		Carretera.push("Riohacha");
+		Carretera.push("Valledupar");
+		Carretera.push("La Paz");
+		Carretera.push("San Benito");
+		return Carretera;
 	}
+	
+	public Stack HorasB(Stack <Number> Horas) 
+	{
+		Horas.push(4.5);
+		Horas.push(2.5);
+		Horas.push(1.5);
+		Horas.push(4);
+		Horas.push(3.5);
+		return Horas;
+	}
+	
+	public Stack CarreteraC(Stack <String> Carretera) 
+	{
+		Carretera.push("Valledupar");
+		Carretera.push("Plato");
+		Carretera.push("San Benito");
+		Carretera.push("MonterÃ­a");
+		Carretera.push("Santa Marta");
+		return Carretera;
+	}
+	
+	public Stack HorasC(Stack <Number> Horas) 
+	{
+		Horas.push(1.5);
+		Horas.push(3);
+		Horas.push(2);
+		Horas.push(4);
+		Horas.push(3);
+		return Horas;
+	}
+	
+	private int buscarCiudad(String ciudad) 
+	{
+		 int index = 0;
+		 
+		 for (int i = 0; i < Carretera.size(); i++) 
+		 {
+			if(ciudad.equalsIgnoreCase(Carretera.get(i))) 
+			{
+				index = i;
+				break;
+			}
+			else
+			{
+				index = -1;
+			}
+		 }
+		 return index;
+	 } 
 }
